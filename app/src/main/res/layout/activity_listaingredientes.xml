@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <!-- Un text view con el nombre de la lista-->
+    <!-- Creo la lista donde se ingresaran los card view-->
+
+    <TextView
+        android:id="@+id/nombreLista"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:text="Test"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="528dp"
+        android:layout_below="@+id/nombreLista"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <!-- Creo el boton de agregar-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/añadiringrediente"
+        android:layout_width="59dp"
+        android:layout_height="53dp"
+        android:layout_alignBottom="@+id/list"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+
+
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add" />
+</RelativeLayout>
